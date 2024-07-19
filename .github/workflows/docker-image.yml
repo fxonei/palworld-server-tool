@@ -6,7 +6,7 @@ on:
       - "v*.*.*"
 env:
   IMAGE_NAME: palworld-server-tool
-  DOCKER_REGISTRY: jokerwho
+  DOCKER_REGISTRY: fxonei
 jobs:
   build-image:
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PWD }}
 
-      - name: Build and push
+      - name: Build 和 push
         uses: docker/build-push-action@v4
         with:
           context: .
