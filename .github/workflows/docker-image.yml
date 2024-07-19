@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PWD }}
 
-      - name: Build 和 push
+      - name: Build and push
         uses: docker/build-push-action@v4
         with:
           context: .
